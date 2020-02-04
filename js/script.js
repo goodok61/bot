@@ -71,6 +71,8 @@ function bot() {
           exitGame('Выход из игры...');
         } else if (!isNumber(userNumber)) {
           notNumber('Введите число!')
+        } else if ((userNumber > 100) || (userNumber < 0)) {
+          notNumber('Введите число от 1 до 100!')
         } else if (number < userNumber) {
           wrongNumber('Загаданное число меньше, осталось попыток: ' + attemptСounter);
         } else if (number > userNumber) {
